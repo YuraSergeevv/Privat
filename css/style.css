@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
 .travel_title {
   font-size: 25px;
   padding-left: 50px;
-  background-image: url("/img/back.png");
+  background-image: url("../img/back.png");
   background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: auto 50%;
