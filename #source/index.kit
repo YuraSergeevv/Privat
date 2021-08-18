@@ -16,17 +16,8 @@
 <body>
 <!-- ОБОЛОЧКА -->
 <div class="wrapper">
-<div class="header">
+    <!-- @import "header.kit" -->
     <div class="container">
-        <div class="top_header">
-            <div><span>--</span><span>Назад</span></div>
-        </div>
-        <div class="bottom_header">
-            <div class="button tab_1 active">кнопка_1</div>
-            <div class="button tab_2">кнопка_2</div>
-        </div>
-    </div>
-</div>    <div class="container">
         <div class="content_1 ">
             <div class="card_inner">
                 <div class="card">
@@ -78,11 +69,10 @@
             </div>
         </div>
     </div>
+    <!-- @import "popup.kit" -->
 
- <!-- кнопка прокрутки вверх -->
-    <!-- Подключеине скриптов -->
-    <script src="libs/jquery/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- @import "bottom.kit" -->
+
 </body>
 
 </html>
