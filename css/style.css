@@ -442,7 +442,7 @@ textarea.error {
   margin-bottom: 20px;
 }
 .card .card_bottom .title {
-  font-size: 12px;
+  font-size: 10px;
   color: #818181;
 }
 .card .card_bottom .info_block {
@@ -462,7 +462,7 @@ textarea.error {
 .card .warning {
   color: #8dc641;
   text-align: center;
-  font-size: 8px;
+  font-size: 10px;
   margin-bottom: 10px;
   letter-spacing: -0.5px;
 }
