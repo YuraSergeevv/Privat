@@ -445,6 +445,9 @@ textarea.error {
   font-size: 10px;
   color: #818181;
 }
+.card .card_bottom .item {
+  font-size: 14px;
+}
 .card .card_bottom .info_block {
   width: calc(100% / 3);
   display: flex;
