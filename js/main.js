@@ -54,6 +54,7 @@ window.onload = function () {
         lastList[i].querySelector('.time-out_js').innerText = '14:32:12';
         lastList[i].querySelector('.number-out_js').innerText = '№'+494;
         lastList[i].querySelector('.count-out_js').innerText = 1 + ' шт';
+        lastList[i].querySelector('.series-out_js').innerText = Math.floor(Math.random()*100000000)
     }
 
 
@@ -65,7 +66,7 @@ window.onload = function () {
 
     buttonOk.addEventListener('click',function (){
        if(numberIn.value && countIn.value){
-           seriesOut.innerText = Math.floor(Math.random()*100000000)
+           seriesOut.innerText = Math.floor(Math.random()*100000000);
            countOut.innerText = countIn.value + ' шт';
            numberOut.innerText = '№'+numberIn.value;
            countIn.value='';
