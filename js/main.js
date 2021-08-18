@@ -11,6 +11,7 @@ window.onload = function () {
     let timerOut    = document.querySelector('.timer-out_js');
     let numberOut    = document.querySelector('.number-out_js');
     let countOut    = document.querySelector('.count-out_js');
+    let seriesOut    = document.querySelector('.series-out_js');
 
     let lastList = Array.from(document.querySelectorAll('.last'));
 
@@ -64,7 +65,7 @@ window.onload = function () {
 
     buttonOk.addEventListener('click',function (){
        if(numberIn.value && countIn.value){
-
+           seriesOut.innerText = Math.floor(Math.random()*100000000)
            countOut.innerText = countIn.value + ' шт';
            numberOut.innerText = '№'+numberIn.value;
            countIn.value='';
