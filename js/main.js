@@ -79,6 +79,8 @@ window.onload = function () {
     }
     let dateFinal = Date.parse(date) + 3600000;
     function timerInterval(){
+        let dateFinal = Date.parse(new Date()) + 3600000;
+        timerOut.innerText = trueDate(60)+' : '+trueDate(0);
         setInterval(function (){
             let now = Date.parse(new Date());
            let time = (dateFinal - now) /1000;
