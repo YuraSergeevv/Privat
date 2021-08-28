@@ -37,10 +37,9 @@ window.onload = function () {
     }
 
 
-    let dateFinal = Date.parse(date) + 3600000;
 
-    console.log(new Date(dateFinal));
-    console.log(date);
+
+
 
     tab_1.addEventListener('click',firstTab);
     tab_2.addEventListener('click',secondTab)
@@ -78,13 +77,14 @@ window.onload = function () {
     function setDay(day,month, year){
         return ( day+'.'+month+'.'+year);
     }
+    let dateFinal = Date.parse(date) + 3600000;
     function timerInterval(){
         setInterval(function (){
             let now = Date.parse(new Date());
            let time = (dateFinal - now) /1000;
            let min = Math.floor(time/60);
             let sec = time - 60 * min;
-            timerOut.innerText = min+' : '+sec;
+            timerOut.innerText = trueDate(min)+' : '+trueDate(sec);
         },1000)
     }
 
