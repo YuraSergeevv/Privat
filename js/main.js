@@ -28,27 +28,6 @@ window.onload = function () {
 
 
 
-    // let lastTravel = [
-    //     {
-    //         series:69420648,
-    //         date: setDay(trueDate(Math.floor(Math.random() * (dayNow - 2) + 1)),trueDate(monthNow),trueDate(yearNow)),
-    //         time: setTime(trueDate(hourNow),trueDate(minuteNow),trueDate(secondNow)),
-    //         number: 494,
-    //         count: 1
-    //     },
-    //     {
-    //         series:69421705,
-    //         date: setDay(trueDate(dayNow ),trueDate(monthNow),trueDate(yearNow)),
-    //         time: setTime(trueDate(hourNow),trueDate(minuteNow),trueDate(secondNow)),
-    //         number: 494,
-    //         count: 1
-    //     },
-    // ]
-
-
-
-
-
     for (let i = 0; i < lastList.length; i++){
         lastList[i].querySelector('.date-out_js').innerText = '14.08.2021';
         lastList[i].querySelector('.time-out_js').innerText = '14:32:12';
@@ -58,8 +37,10 @@ window.onload = function () {
     }
 
 
+    let dateFinal = Date.parse(date) + 3600000;
 
-
+    console.log(new Date(dateFinal));
+    console.log(date);
 
     tab_1.addEventListener('click',firstTab);
     tab_2.addEventListener('click',secondTab)
@@ -99,16 +80,11 @@ window.onload = function () {
     }
     function timerInterval(){
         setInterval(function (){
-
-            timerSecond--;
-            timerOut.innerText = (trueDate(timerMinute)+':'+trueDate(timerSecond));
-            if(timerSecond == 0){
-                timerMinute--;
-                timerSecond= 60;
-            }
-             if(timerMinute == 0){
-                 timerMinute = 20;
-            }
+            let now = Date.parse(new Date());
+           let time = (dateFinal - now) /1000;
+           let min = Math.floor(time/60);
+            let sec = time - 60 * min;
+            timerOut.innerText = min+' : '+sec;
         },1000)
     }
 
@@ -122,4 +98,6 @@ function trueDate(number){
         return (''+number)
     }
 }
+
+
 
