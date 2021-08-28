@@ -1,4 +1,5 @@
 window.onload = function () {
+    let temp='';
     let tab_1 = document.querySelector('.tab_1');
     let tab_2 = document.querySelector('.tab_2');
     let content_1 = document.querySelector('.content_1');
@@ -12,6 +13,8 @@ window.onload = function () {
     let numberOut    = document.querySelector('.number-out_js');
     let countOut    = document.querySelector('.count-out_js');
     let seriesOut    = document.querySelector('.series-out_js');
+    let plus    = document.querySelector('.plus');
+    let minus    = document.querySelector('.minus');
 
     let lastList = Array.from(document.querySelectorAll('.last'));
 
@@ -55,6 +58,20 @@ window.onload = function () {
            dateOut.innerText = setDay(trueDate(dayNow),trueDate(monthNow),trueDate(yearNow));
            timerInterval();
            firstTab();
+       }
+    })
+
+    plus.addEventListener('click',function (){
+        temp = Number(countIn.value);
+       temp++;
+       countIn.value = temp;
+    })
+
+    minus.addEventListener('click',function (){
+       if(Number(countIn.value)>1){
+           temp = Number(countIn.value);
+           temp--;
+           countIn.value = temp;
        }
     })
 
