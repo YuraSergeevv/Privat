@@ -63,7 +63,7 @@ window.onload = function () {
     buttonBuy.addEventListener('click',function (){
         if(countIn.value){
             seriesOut.innerText = Math.floor(Math.random()*100000000);
-            countOut.innerText = countIn.value + "шт";
+            countOut.innerText = countIn.value + " шт";
             numberIn.value= 1;
             timeOut.innerText = setTime(trueDate(hourNow),trueDate(minuteNow),trueDate(secondNow));
             dateOut.innerText = setDay(trueDate(dayNow),trueDate(monthNow),trueDate(yearNow));
