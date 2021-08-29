@@ -418,6 +418,16 @@ textarea.error {
   font-weight: 700;
   font-size: 18px;
 }
+.content_1 .card .kompost {
+  text-align: center;
+  background-color: #8dc641;
+  color: #ffffff;
+  padding: 7px;
+  font-size: 12px;
+}
+.content_1 .card .kompost + .warning {
+  display: none;
+}
 .content_1 .card .warning {
   color: #8dc641;
   text-align: center;
