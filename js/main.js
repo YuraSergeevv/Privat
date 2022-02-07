@@ -133,7 +133,7 @@ window.onload = function () {
 };
 
 function infoMoney (counter){
-    return(counter*5);
+    return(counter*6);
 }
 
 function trueDate(number){
