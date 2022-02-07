@@ -60,7 +60,7 @@ window.onload = function () {
            firstTab();
        }
     });
-    buttonBuy.addEventListener('click',function (){
+     buttonBuy.addEventListener('click',function (){
         if(countIn.value){
             seriesOut.innerText = Math.floor(Math.random()*100000000);
             countOut.innerText = countIn.value + " шт";
@@ -68,6 +68,7 @@ window.onload = function () {
             timeOut.innerText = setTime(trueDate(hourNow),trueDate(minuteNow),trueDate(secondNow));
             dateOut.innerText = setDay(trueDate(dayNow),trueDate(monthNow),trueDate(yearNow));
             thirtyTab();
+            timeFinal();
         }
     });
     plus.addEventListener('click',function (){
@@ -117,10 +118,17 @@ window.onload = function () {
     function setDay(day,month, year){
         return ( day+'.'+month+'.'+year);
     }
-    let dateFinal = Date.parse(date) + 3600000;
+    let dateFinal = 0;
+    function  timeFinal(){
+        dateFinal =  (Date.parse(new Date()) + 3600000);
+    }
+
     function timerInterval(){
-        let dateFinal = Date.parse(new Date()) + 3600000;
-        timerOut.innerText = trueDate(59)+' : '+trueDate(59);
+        let now = Date.parse(new Date());
+        let time = (dateFinal - now) /1000 -1;
+        let min = Math.floor(time/60);
+        let sec = time - 60 * min;
+        timerOut.innerText = trueDate(min)+' : '+trueDate(sec);
         setInterval(function (){
             let now = Date.parse(new Date());
            let time = (dateFinal - now) /1000 -1;
